@@ -124,23 +124,6 @@ header nav{
 }
 
 
-/*flexbox del header*/
-
-
-.header-contenedor div{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.div-logo a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
 
 /*----------------Main del index---------------*/
 
