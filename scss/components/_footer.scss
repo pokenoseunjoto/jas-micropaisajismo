@@ -1,0 +1,30 @@
+/* Footer */
+
+footer{
+    grid-area: footer;
+    background-color: $color-principal;
+    padding-top: 30px;
+    div{
+        display: flex;
+        justify-content: center;
+        a{
+            img{
+                width: 50px;
+                height: 50px;
+                transition: 1s;
+                padding: 10px;
+                &:hover{
+                    transform: scale(1.4);
+                }
+            }
+        }
+    }
+    p{
+        font-family: 'Alkatra', cursive;
+        font-size: 30px;
+        text-align: center;
+        text-shadow: 3px 3px 3px rgba(236, 236, 212, 0.55);
+        margin-bottom: 0;
+        padding-bottom: 0.5rem;
+    }
+}

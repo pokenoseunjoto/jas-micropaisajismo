@@ -1,0 +1,938 @@
+/*----------------Main del index---------------*/
+
+main{
+    .hero-section{
+        height: 580px;
+        width: 100%;
+        @extend %background-image;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.226),rgba(0, 0, 0, 0.247)), url(../img/terrarios-sacados-de-la-web/pexels-max-rahubovskiy-8082555.jpg);
+        /*Flexbox del Hero Section*/
+        @extend %flexbox-3;
+        flex-direction: row;
+        div{
+            h2{
+                color: rgba(169, 169, 169, 0.664);
+                font-size: 65px;
+                font-family: 'Alkatra', cursive;
+                display: inline-block;
+                margin: 10px 5px 10px 5px;
+                padding-left: 30px;
+                padding-right: 30px;
+                background-color:rgba(0, 0, 0, 0.507);
+                border-radius: 18%;
+            }
+            p{
+                color: rgba(0, 0, 0, 0.678);
+                font-size: 40px;
+                font-family: 'Alkatra', cursive;
+                display: inline-block;
+                margin: 10px 5px 10px 5px;
+                padding-left: 30px;
+                padding-right: 30px;
+                background-color: rgba(169, 169, 169, 0.664);
+            }
+        }
+    }
+    .menu-con-imagenes{
+        .div-contenedor-1{
+            /*Flexbox del menu con imagenes*/
+            @extend %flexbox-2;
+            padding: 10px 5px 10px 5px;
+            div{
+                width: 400px;
+                height: 600px;
+                position: relative;
+                margin: 20px 5px 20px 5px;
+                display: inline-block;
+                a{
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        box-shadow: 9px 11px 17px 4px rgba(0,0,0,0.67);
+                    -webkit-box-shadow: 9px 11px 17px 4px rgba(0,0,0,0.67);
+                    -moz-box-shadow: 9px 11px 17px 4px rgba(0,0,0,0.67);
+                    }
+                    .tienda-y-acerca-de{
+                        position:absolute;
+                        bottom: 0;
+                        width: 100%;
+                        text-align: center;
+                        font-family: 'Alkatra', cursive;
+                        margin-bottom: 0;
+                        /* Color del texto interno del menu con imagenes */
+                        color: whitesmoke;
+                        background-color: rgba(0, 0, 0, 0.527);
+                    }
+                }
+            }
+            div{
+                a{
+                    .galeria-y-trabaja{
+                        position:absolute;
+                        bottom: 0;
+                        width: 100%;
+                        text-align: center;
+                        font-family: 'Alkatra', cursive;
+                        margin-bottom: 0;
+                        /* Color del texto interno del menu con imagenes */
+                        color: black;
+                        background-color: rgba(245, 245, 245, 0.582);
+                    }
+                }
+            }
+        }
+    }
+    .menu-con-imagenes-final{
+        .div-contenedor-2{
+            /*Flexbox del menu con imagenes*/
+            @extend %flexbox-2;
+            padding: 10px 5px 20px 5px;
+            div{
+                width: 400px;
+                height: 600px;
+                position: relative;
+                margin: 20px 5px 20px 5px;
+                display: inline-block;
+                a{
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        box-shadow: 9px 11px 17px 4px rgba(0,0,0,0.67);
+                        -webkit-box-shadow: 9px 11px 17px 4px rgba(0,0,0,0.67);
+                        -moz-box-shadow: 9px 11px 17px 4px rgba(0,0,0,0.67);
+                    }
+                    .tienda-y-acerca-de{
+                        position:absolute;
+                        bottom: 0;
+                        width: 100%;
+                        text-align: center;
+                        font-family: 'Alkatra', cursive;
+                        /* Color del texto interno del menu con imagenes */
+                        color: whitesmoke;
+                        background-color: rgba(0, 0, 0, 0.527);
+                    }
+                }
+            }
+            div{
+                a{
+                    .galeria-y-trabaja{
+                        position:absolute;
+                        bottom: 0;
+                        width: 100%;
+                        text-align: center;
+                        font-family: 'Alkatra', cursive;
+                        margin-bottom: 0;
+                        /* Color del texto interno del menu con imagenes */
+                        color: black;
+                        background-color: rgba(245, 245, 245, 0.582);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*----------------Main de la tienda---------------*/
+
+main{
+    .tienda-titulo{
+        /*Titulo de la tienda*/
+        height: 500px;
+        width: 100%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.226),rgba(0, 0, 0, 0.247)), url(../img/terrarios-sacados-de-la-web/nielsen-ramon-okvqMfl78YE-unsplash.jpg);
+        @extend %background-image;
+        /*FLEXBOX DE .TIENDA-TITULO*/
+        @extend %flexbox-1;
+        div{
+            h2{
+                color: whitesmoke;
+                font-family: 'Alkatra', cursive;
+                background-color: rgba(0, 0, 0, 0.274);
+                display: inline-block;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding: 5px 10px 5px 10px;
+                font-size: 65px ;
+                font-weight: 40px;
+                border-radius: 20%;
+            }
+            p{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding: 5px 10px 5px 10px;
+                font-family: 'Alkatra', cursive;
+                background-color: rgba(0, 0, 0, 0.274);
+                color: whitesmoke;
+                border-radius: 20%;
+            }
+        }
+    }
+    section{
+        .terrario-jar{
+            /*CLASES ESPECIFICAS PARA CADA SECTION*/
+            margin: 20px 20px 20px 20px;
+            @extend %flexbox-3;
+            .descripcion-tienda{
+                /*  DESCRIPCION-TIENDA  */
+                width: 100%;
+                margin: 20px 20px 20px 20px;
+                @extend %flexbox-4;
+                text-align: center;
+                h3{
+                    color:darkkhaki;
+                    font-family: 'Alkatra', cursive;
+                    margin: 20px 20px 20px 20px;
+                    font-size: 50px ;
+                    font-weight: 40px;
+                    /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                    &::selection{
+                        background-color: $color-1;
+                        color: $color-2;
+                    }
+                }
+                .precio{
+                    color:rgb(0, 0, 0);
+                    background-color: rgba(240, 248, 255, 0.61);
+                    font-family: 'Alkatra', cursive;
+                    font-size: 2rem ;
+                    transition: 1s;
+                    /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                    &::selection{
+                        background-color: $color-1;
+                        color: $color-2;
+                    }
+                }
+                .descripcion-texto-tienda{
+                    color:burlywood;
+                    font-family: 'Alkatra', cursive;
+                    font-size: 1.3rem ;
+                    /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                    &::selection{
+                        background-color: $color-1;
+                        color: $color-2;
+                    }
+                }
+                a{
+                    color: blanchedalmond;
+                    font-family: 'Alkatra', cursive;
+                    font-size: 2rem;
+                    width: 20%;
+                    transition: 0.8s;
+                    /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                    &:hover{
+                        color: rgb(95, 57, 26);
+                        background-color: rgba(250, 224, 185, 0.863);
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .imagenes-tienda{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                div{
+                    @extend %flexbox-3;
+                    img{
+                        width: 90%;
+                        height: 90%;
+                        transition: 1s;
+                        /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                        &:hover{
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section{
+        .terrario-jug{
+            /*CLASES ESPECIFICAS PARA CADA SECTION*/
+            margin-left: 20px;
+            margin-right: 20px;
+            @extend %flexbox-3;
+            flex-direction: row-reverse;
+            .descripcion-tienda{
+                /*  DESCRIPCION-TIENDA  */
+                width: 100%;
+                margin: 20px 20px 20px 20px;
+                @extend %flexbox-4;
+                text-align: center;
+                h3{
+                    color:darkkhaki;
+                    font-family: 'Alkatra', cursive;
+                    margin: 20px 20px 20px 20px;
+                    font-size: 50px ;
+                    font-weight: 40px;
+                    /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                    &::selection{
+                        background-color: $color-1;
+                        color: rgba(240, 248, 255, 0.274);
+                    }
+                }
+                .precio{
+                    color:rgb(0, 0, 0);
+                    background-color: rgba(240, 248, 255, 0.61);
+                    font-family: 'Alkatra', cursive;
+                    font-size: 2rem ;
+                    transition: 1s;
+                    /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                    &::selection{
+                        background-color: $color-1;
+                        color: rgba(240, 248, 255, 0.274);
+                    }
+                }
+                .descripcion-texto-tienda{
+                    color:burlywood;
+                    font-family: 'Alkatra', cursive;
+                    font-size: 1.3rem ;
+                    /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                    &::selection{
+                        background-color: $color-1;
+                        color: rgba(240, 248, 255, 0.274);
+                    }
+                }
+                a{
+                    color: blanchedalmond;
+                    font-family: 'Alkatra', cursive;
+                    font-size: 2rem;
+                    width: 20%;
+                    transition: 0.8s;
+                    /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                    &:hover{
+                        color: rgb(95, 57, 26);
+                        background-color: rgba(250, 224, 185, 0.863);
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .imagenes-tienda-jug{
+                /*  IMAGENES-TIENDA-JUG  */
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .jug-imagenes-1{
+                    @extend %flexbox-4;
+                    img{
+                        /*FLEXBOX DE JUG-IMAGENES*/
+                        width: 90%;
+                        height: 90%;
+                        padding-bottom: 5%;
+                        padding-top: 5%;
+                        transition: 1s;
+                        /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+                .jug-imagenes-2{
+                    @extend %flexbox-4;
+                    img{
+                        /*FLEXBOX DE JUG-IMAGENES*/
+                        width: 90%;
+                        height: 90%;
+                        padding-bottom: 5%;
+                        padding-top: 5%;
+                        transition: 1s;
+                        /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section{
+        .terrario-low-vase{
+            /*CLASES ESPECIFICAS PARA CADA SECTION*/
+            margin: 20px 20px 20px 20px;
+            @extend %flexbox-3;
+            .descripcion-tienda{
+                /*  DESCRIPCION-TIENDA  */
+                width: 100%;
+                margin: 20px 20px 20px 20px;
+                @extend %flexbox-4;
+                text-align: center;
+                h3{
+                    color:darkkhaki;
+                    font-family: 'Alkatra', cursive;
+                    margin: 20px 20px 20px 20px;
+                    font-size: 50px ;
+                    font-weight: 40px;
+                    /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                    &::selection{
+                        background-color: $color-1;
+                        color: $color-2;
+                    }
+                }
+                .precio{
+                    color:rgb(0, 0, 0);
+                    background-color: rgba(240, 248, 255, 0.61);
+                    font-family: 'Alkatra', cursive;
+                    font-size: 2rem ;
+                    transition: 1s;
+                    /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                    &::selection{
+                        background-color: $color-1;
+                        color: $color-2;
+                    }
+                }
+                .descripcion-texto-tienda{
+                    color:burlywood;
+                    font-family: 'Alkatra', cursive;
+                    font-size: 1.3rem ;
+                    /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                    &::selection{
+                        background-color: $color-1;
+                        color: $color-2;
+                    }
+                }
+                a{
+                    color: blanchedalmond;
+                    font-family: 'Alkatra', cursive;
+                    font-size: 2rem;
+                    width: 20%;
+                    transition: 0.8s;
+                    /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                    &:hover{
+                        color: rgb(95, 57, 26);
+                        background-color: rgba(250, 224, 185, 0.863);
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .imagenes-tienda-low-vase{
+                /*  IMAGENES-TIENDA-LOW-VASE  */
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .low-vase-imagenes-1{
+                    @extend %flexbox-4;
+                    img{
+                        /*FLEXBOX DE LOW-VASE*/
+                        width: 90%;
+                        height: 90%;
+                        padding-bottom: 5%;
+                        padding-top: 5%;
+                        transition: 1s;
+                        /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+                .low-vase-imagenes-2{
+                    @extend %flexbox-4;
+                    img{
+                        /*FLEXBOX DE LOW-VASE*/
+                        width: 90%;
+                        height: 90%;
+                        padding-bottom: 5%;
+                        padding-top: 5%;
+                        transition: 1s;
+                        /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section{
+        .terrario-cylinder{
+            /*CLASES ESPECIFICAS PARA CADA SECTION*/
+            margin-left: 20px;
+            margin-right: 20px;
+            padding-bottom: 20px;
+            @extend %flexbox-3;
+            flex-direction: row-reverse;
+            .descripcion-tienda{
+                /*  DESCRIPCION-TIENDA  */
+                width: 100%;
+                margin: 20px 20px 20px 20px;
+                @extend %flexbox-4;
+                text-align: center;
+                h3{
+                    color:darkkhaki;
+                    font-family: 'Alkatra', cursive;
+                    margin: 20px 20px 20px 20px;
+                    font-size: 50px ;
+                    font-weight: 40px;
+                    /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                    &::selection{
+                        background-color: $color-1;
+                        color: $color-2;
+                    }
+                }
+                .precio{
+                    color:rgb(0, 0, 0);
+                    background-color: rgba(240, 248, 255, 0.61);
+                    font-family: 'Alkatra', cursive;
+                    font-size: 2rem ;
+                    transition: 1s;
+                    /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                    &::selection{
+                        background-color: $color-1;
+                        color: $color-2;
+                    }
+                }
+                .descripcion-texto-tienda{
+                    color:burlywood;
+                    font-family: 'Alkatra', cursive;
+                    font-size: 1.3rem ;
+                    /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                    &::selection{
+                        background-color: $color-1;
+                        color: $color-2;
+                    }
+                }
+                a{
+                    color: blanchedalmond;
+                    font-family: 'Alkatra', cursive;
+                    font-size: 2rem;
+                    width: 20%;
+                    transition: 0.8s;
+                    /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                    &:hover{
+                        color: rgb(95, 57, 26);
+                        background-color: rgba(250, 224, 185, 0.863);
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .imagenes-tienda{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                div{
+                    @extend %flexbox-3;
+                    img{
+                        width: 90%;
+                        height: 90%;
+                        transition: 1s;
+                        /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                        &:hover{
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/*----------------Main de la galeria---------------*/
+
+
+main{
+    .galeria-titulo{
+        height: 600px;
+        width: 100%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.226),rgba(0, 0, 0, 0.247)), url(../img/terrarios-sacados-de-la-web/pexels-cottonbro-studio-4507714.jpg);
+        @extend %background-image;
+        /*Flexbox de la tienda*/
+        @extend %flexbox-1;
+        div{
+            h2{
+                color: whitesmoke;
+                font-family: 'Alkatra', cursive;
+                background-color: rgba(0, 0, 0, 0.274);
+                display: inline-block;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding: 5px 10px 5px 10px;
+                font-size: 65px ;
+                font-weight: 40px;
+                border-radius: 20%;
+            }
+            p{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding: 5px 10px 5px 10px;
+                font-family: 'Alkatra', cursive;
+                background-color: rgba(0, 0, 0, 0.274);
+                color: whitesmoke;
+                border-radius: 20%;
+            }
+        }
+    }
+    .galeria-img{
+        /*-----------------IMAGENES-GALERIA-------------*/
+        @extend %flexbox-3;
+        padding: 15px;
+        flex-direction: row;
+        .galeria-contenedor-padre{
+            background-color: rgba(148, 132, 107, 0.096);
+            @include grid (grid, repeat(3, 1fr));
+            .galeria-texto{
+                @extend %flexbox-4;
+                justify-content: space-around;
+                text-align: center;
+                font-family: 'Alkatra', cursive;
+                h2{
+                    color: beige;
+                    font-size: 2.5rem;
+                    padding: 15px;
+                    transition: 1s;
+                    /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                    &:hover{
+                        font-size: 3rem;
+                    }
+                    &::selection{
+                        background-color: $color-1;
+                        color: $color-2;
+                    }
+                }
+                p{
+                    color: beige;
+                    font-size: 1.2rem;
+                    padding: 20px;
+                    transition: 1s;
+                    /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                    &:hover{
+                        font-size: 1.6rem;
+                    }
+                    &::selection{
+                        background-color: $color-1;
+                        color: $color-2;
+                    }
+                }
+            }
+            .div-contenedor-img{
+                grid-column: 2 / 4;
+                padding: 20px ;
+                .grid-galeria{
+                    width: 100%;
+                    height: 100%;
+                    @include grid (grid, repeat(3, 1fr));
+                    grid-template-rows: 460px 460px 460px 460px;
+                    align-items: center;
+                    justify-items: center;
+                    gap: 20px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        box-shadow: 9px 11px 17px 4px rgba(0,0,0,0.67);
+                    -webkit-box-shadow: 9px 11px 17px 4px rgba(0,0,0,0.67);
+                    -moz-box-shadow: 9px 11px 17px 4px rgba(0,0,0,0.67);
+                    }
+                    .imagen-colum2{
+                        grid-column: 1 / 3;
+                    }
+                    .video-no-ampliado{
+                        width: 100%;
+                        height: 100%;
+                        box-shadow: 9px 11px 17px 4px rgba(0,0,0,0.67);
+                    -webkit-box-shadow: 9px 11px 17px 4px rgba(0,0,0,0.67);
+                    -moz-box-shadow: 9px 11px 17px 4px rgba(0,0,0,0.67);
+                    }
+                    .video-ampliado{
+                        width: 100%;
+                        height: 100%;
+                        grid-column: 2 / 4;
+                        box-shadow: 9px 11px 17px 4px rgba(0,0,0,0.67);
+                    -webkit-box-shadow: 9px 11px 17px 4px rgba(0,0,0,0.67);
+                    -moz-box-shadow: 9px 11px 17px 4px rgba(0,0,0,0.67);
+                    }
+                }
+            }
+        }
+    }
+    section{
+        .video-demostrativo{
+            /*Video demostrativo*/
+            @extend %flexbox-1;
+            font-family: 'Alkatra', cursive; 
+            h2{
+                font-size: 3rem;
+                font-weight: 3rem;
+                color: rgba(169, 169, 169, 0.664);
+            }
+            iframe{
+                box-shadow: -12px 10px 23px 8px rgba(0,0,0,0.7);
+                -webkit-box-shadow: -12px 10px 23px 8px rgba(0,0,0,0.7);
+                -moz-box-shadow: -12px 10px 23px 8px rgba(0,0,0,0.7);
+            }
+        }
+    }
+
+}
+
+
+/*----------------Main de acerca de---------------*/
+
+main{
+    .acerca-de-titulo{
+        height: 700px;
+        width: 100%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.226),rgba(0, 0, 0, 0.247)), url(../img/terrarios-sacados-de-la-web/acerca-de-3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center;
+        text-align: center;
+        background-attachment: fixed;
+        /*FLEXBOX*/
+        @extend %flexbox-3;
+        /*TEXTO ACERCA DE*/
+        div{
+            h2{
+                color: whitesmoke;
+                font-family: 'Alkatra', cursive;
+                background-color: rgba(0, 0, 0, 0.274);
+                margin-top: 20px;
+                margin-bottom: 20px;
+                display: inline-block;
+                padding: 5px 10px 5px 10px;
+                font-size: 65px ;
+                font-weight: 40px;
+                border-radius: 20%;
+            }
+            p{
+                color: whitesmoke;
+                font-family: 'Alkatra', cursive;
+                background-color: rgba(0, 0, 0, 0.274);
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding: 5px 10px 5px 10px;
+                font-size: 20px ;
+                font-weight: 15px;
+                border-radius: 20%;
+            }
+        }
+    }
+    section{
+        .contenedor-padre-acercade1{
+            background-color: rgba(0, 0, 0, 0.219);
+            margin: 15px;
+            @include grid (grid, repeat(2, 1fr));
+            grid-template-areas: 
+            "texto1 imagen1";
+            align-items: center;
+            justify-content: center;
+            /*TEXTO CONTENEDOR ACERCA DE */
+            .contenedor-acercade-texto1{
+                width:100%;
+                height: 100%;
+                color: whitesmoke;
+                @extend %flexbox-4;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                text-align: center;
+                font-family: 'Alkatra', cursive;
+                grid-area: texto1;
+                h3{
+                    font-size: 3rem;
+                    padding: 15px;
+                    text-shadow: 3px 4px 2px rgba(215,213,124,0.55);
+                }
+                p{
+                    font-size: 1.5rem;
+                    padding: 20px;
+                    text-shadow: 3px 4px 2px rgba(215,213,124,0.55);
+                }
+            }
+            .contenedor-acercade-imagen1{
+                /*IMAGENES ACERCA DE*/
+                grid-area: imagen1;
+                @extend %flexbox-3;
+                img{
+                    width: 70%;
+                    height: 70%;
+                    padding: 10px;
+                }
+            }
+        }
+        .contenedor-padre-acercade2{
+            background-color: rgba(0, 0, 0, 0.219);
+            margin: 15px;
+            @include grid (grid, repeat(2, 1fr));
+            grid-template-areas: 
+            "imagen2 texto2";
+            align-items: center;
+            justify-content: center;
+            .contenedor-acercade-imagen2{
+                /*IMAGENES ACERCA DE*/
+                grid-area: imagen2;
+                @extend %flexbox-3;
+                img{
+                    width: 70%;
+                    height: 70%;
+                    padding: 10px;
+                }
+            }
+            .contenedor-acercade-texto2{
+                width:100%;
+                height: 100%;
+                color: whitesmoke;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-content: center;
+                flex-wrap: wrap;
+                text-align: center;
+                font-family: 'Alkatra', cursive;
+                grid-area: texto2;
+                h3{
+                    font-size: 3rem;
+                    padding: 15px;
+                    text-shadow: 3px 4px 2px rgba(215,213,124,0.55);
+                }
+                p{
+                    font-size: 1.5rem;
+                    padding: 20px;
+                    text-shadow: 3px 4px 2px rgba(215,213,124,0.55);
+                }
+            }
+        }
+    }
+    section{
+        .acercade-grid-3{
+            background-color: rgba(0, 0, 0, 0.274);
+            margin-top: 15px;
+            margin-left: 15px;
+            margin-right: 15px;
+            display: grid;
+            .contactanos-texto{
+                grid-area: contactanos;
+                @extend %flexbox-1;
+                div{
+                    @extend %flexbox-1;
+                    h4{
+                        color: whitesmoke;
+                        font-family: 'Alkatra', cursive;
+                        text-align: center;
+                        font-size: 3rem;
+                        font-weight: 1rem;
+                        text-shadow: 3px 4px 2px rgba(0,0,0,0.55);
+                    }
+                    p{
+                        color: whitesmoke;
+                        font-family: 'Alkatra', cursive;
+                        text-align: center;
+                        font-size: 1.5rem;
+                        font-weight: 0.5rem;
+                        text-shadow: 3px 4px 2px rgba(0,0,0,0.55);
+                    }
+                }
+                div{
+                    @extend %flexbox-1;
+                    p{
+                        color: whitesmoke;
+                        font-family: 'Alkatra', cursive;
+                        text-align: center;
+                        font-size: 1.5rem;
+                        font-weight: 0.5rem;
+                        text-shadow: 3px 4px 2px rgba(0,0,0,0.55);
+                    }
+                    a{
+                        display: inline-block;
+                        align-items: center;
+                    }
+                }
+            }
+            .contenedor-ubicacion{
+                grid-area: ubicacion;
+                display: flex;
+                flex-direction: column;
+                h3{
+                    color: whitesmoke;
+                    font-family: 'Alkatra', cursive;
+                    text-align: center;
+                    font-size: 3rem;
+                    font-weight: 1rem;
+                    text-shadow: 3px 4px 2px rgba(0,0,0,0.55);
+                }
+                p{
+                    color: whitesmoke;
+                    font-family: 'Alkatra', cursive;
+                    text-align: center;
+                    font-size: 1.5rem;
+                    font-weight: 0.5rem;
+                    text-shadow: 3px 4px 2px rgba(0,0,0,0.55);
+                }
+                iframe{
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+
+/*----------------Main de trabaja con nosotros---------------*/
+
+main{
+    section{
+        .trabaja-con-nosotros{
+            width: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.226),rgba(0, 0, 0, 0.247)), url(../img/terrarios-sacados-de-la-web/pexels-cottonbro-studio-4507713.jpg);
+            @extend %background-image;
+            /*Flexbox de la tienda*/
+            @extend %flexbox-1;
+            h2{
+                color: whitesmoke;
+                font-family: 'Alkatra', cursive;
+                background-color: rgba(0, 0, 0, 0.274);
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding: 5px 10px 5px 10px;
+                font-size: 65px ;
+                font-weight: 40px;
+                border-radius: 20%;
+            }
+            p{
+                color: whitesmoke;
+                font-family: 'Alkatra', cursive;
+                background-color: rgba(0, 0, 0, 0.274);
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding: 5px 10px 5px 10px;
+                font-size: 35px ;
+                font-weight: 10px;
+                border-radius: 20%;
+            }
+            .formulario-trabaja{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding: 5px 10px 5px 10px;
+                font-family: 'Alkatra', cursive;
+                background-color: rgba(0, 0, 0, 0.274);
+                color: whitesmoke;
+                div{
+                    input{
+                        outline: none;
+                        transition: 1s;
+                        /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                        &:focus{
+                            border: 3.5px solid  rgb(210, 105, 30);
+                            border-radius: 50px;
+                        }
+                    }
+                }
+                div{
+                    textarea{
+                        outline: none;
+                        transition: 1s;
+                        /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
+                        &:focus{
+                            border: 3.5px solid  rgb(210, 105, 30);
+                            border-radius: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

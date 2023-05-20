@@ -1,0 +1,494 @@
+/*-------------------MEDIAQUARY GENERAL-------------------*/ 
+/*INDEX*/
+@media screen and (max-width:950px){
+    main{
+        .hero-section{
+            height: 450px;
+            width: 100%;
+            div {
+                h2 {
+                    font-size: 45px;
+                }
+                p{
+                    font-size: 20px;
+                }
+            }
+        }
+        .menu-con-imagenes{
+            .div-contenedor-1{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .menu-con-imagenes-final{
+            .div-contenedor-2{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:550px){
+
+    main{
+        .hero-section{
+            height: 350px;
+            width: 100%;
+        }
+        .menu-con-imagenes{
+            .div-contenedor-1{
+                div{ 
+                    /* Menu con imagenes */
+                    width: 300px;
+                    height: 450px;
+                }
+            }
+        }
+        .menu-con-imagenes-final{
+            .div-contenedor-2{
+                div{
+                    /* Menu con imagenes-final */
+                    width: 300px;
+                    height: 450px;
+                }
+            }
+        }
+    }
+}
+
+/*TIENDA*/
+
+@media screen and (max-width:950px){
+    /*Titulo de la tienda*/
+    main{
+        .tienda-titulo{
+            height: 350px;
+            width: 100%;
+            div{
+                h2{
+                    font-size: 45px ;
+                    font-weight: 20px;
+                    border-radius: 20%;
+                }
+            }
+        }
+        section{
+            .terrario-jar{
+                /*CLASES ESPECIFICAS PARA CADA SECTION*/
+                flex-direction: column;
+            }
+        }
+        section{
+            .terrario-jug{
+                /*CLASES ESPECIFICAS PARA CADA SECTION*/
+                flex-direction: column;
+            }
+        }
+        section{
+            .terrario-low-vase{
+                /*CLASES ESPECIFICAS PARA CADA SECTION*/
+                flex-direction: column;
+            }
+        }
+        section{
+            .terrario-cylinder{
+                /*CLASES ESPECIFICAS PARA CADA SECTION*/
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:550px){
+    main{
+        section{
+            .terrario-jar{
+                .descripcion-tienda{
+                    h3{
+                        font-size: 40px ;
+                        font-weight: 30px;
+                    }
+                    a{
+                        font-size: 1.5rem;
+                        width: 20%;
+                    }
+                    .precio{
+                        font-size: 1.5rem ;
+                    }
+                    .descripcion-texto-tienda{
+                        font-size: 1rem ;
+                    }
+                }
+            }
+            .terrario-jug{
+                .descripcion-tienda{
+                    h3{
+                        font-size: 40px ;
+                        font-weight: 30px;
+                    }
+                    a{
+                        font-size: 1.5rem;
+                        width: 20%;
+                    }
+                    .precio{
+                        font-size: 1.5rem ;
+                    }
+                    .descripcion-texto-tienda{
+                        font-size: 1rem ;
+                    }
+                }
+            }
+            .terrario-low-vase{
+                .descripcion-tienda{
+                    h3{
+                        font-size: 40px ;
+                        font-weight: 30px;
+                    }
+                    a{
+                        font-size: 1.5rem;
+                        width: 20%;
+                    }
+                    .precio{
+                        font-size: 1.5rem ;
+                    }
+                    .descripcion-texto-tienda{
+                        font-size: 1rem ;
+                    }
+                }
+            }
+            .terrario-cylinder{
+                .descripcion-tienda{
+                    h3{
+                        font-size: 40px ;
+                        font-weight: 30px;
+                    }
+                    a{
+                        font-size: 1.5rem;
+                        width: 20%;
+                    }
+                    .precio{
+                        font-size: 1.5rem ;
+                    }
+                    .descripcion-texto-tienda{
+                        font-size: 1rem ;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*GALERIA*/
+
+@media screen and (max-width: 1650px){
+    /*-----------------IMAGENES-GALERIA-------------*/
+    main{
+        .galeria-img{
+            .galeria-contenedor-padre{
+                display: flex;
+                align-items:center;
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+        section{
+            .video-demostrativo{
+                h2{
+                    font-size: 2.5rem;
+                }
+                iframe  {
+                    width: 60%;
+                    height: 600px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1290px){
+    /*Titulo de la galeria*/ 
+    main{
+        .galeria-titulo{
+            height: 400px;
+            div{
+                h2{
+                    font-size: 45px ;
+                }
+                p{
+                    font-size: 10px ;
+                }
+            }
+        }
+        .galeria-img{
+            .galeria-contenedor-padre{
+                .galeria-texto{
+                    h2{
+                        /*-----------------IMAGENES-GALERIA-------------*/
+                        font-size: 2.3rem;
+                    }
+                    p{
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        section{
+            .video-demostrativo{
+                h2{
+                    /*Video demostrativo*/
+                    font-size: 1.7rem;
+                }
+                iframe  {
+                    height: 400px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px){
+    /*-----------------IMAGENES-GALERIA-------------*/
+    main{
+        .galeria-img{
+            .galeria-contenedor-padre{
+                .div-contenedor-img{
+                    .grid-galeria{
+                        @include grid-mediaquerys (grid, 400px 430px 400px 430px 460px);
+                        .video-no-ampliado{
+                            grid-column: 1 / 4;
+                        }
+                        .imagen-colum2{
+                            grid-column: 1 / 4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 800px){
+    main{
+        .galeria-titulo{
+            height: 350px;
+            div{
+                h2{
+                    font-size: 30px ;
+                }
+            }
+        }
+        .galeria-img{
+            .galeria-contenedor-padre{
+                .galeria-texto{
+                    h2{
+                        /*-----------------IMAGENES-GALERIA-------------*/
+                        font-size: 2rem;
+                    }
+                    p{
+                        font-size: 0.9rem;
+                    }
+                }
+                .div-contenedor-img{
+                    .grid-galeria{
+                        @include grid-mediaquerys (grid, 350px 350px 350px 350px 350px);
+                    }
+                }
+            }
+        }
+        section{
+            .video-demostrativo{
+                h2{
+                    /*Video demostrativo*/
+                    font-size: 1.2rem;
+                    font-weight: 1.2rem;
+                }
+                iframe  {
+                    height: 300px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    /*-----------------IMAGENES-GALERIA-------------*/
+    main{
+        .galeria-titulo{
+            height: 250px;
+        }
+        .galeria-img{
+            .galeria-contenedor-padre{
+                .galeria-texto{
+                    h2{
+                        font-size: 1.5rem;
+                    }
+                }
+                .div-contenedor-img{
+                    .grid-galeria{
+                        @include grid-mediaquerys (grid, 200px 200px 200px 200px 200px);
+                    }
+                }
+            }
+        }
+        section{
+            .video-demostrativo{
+                h2{
+                    /*Video demostrativo*/
+                    font-size: 0.9rem;
+                    font-weight: 0.9rem;
+                }
+                iframe  {
+                    height: 200px;
+                }
+            }
+        }
+    }
+}
+
+
+/*TRABAJA CON NOSOTROS*/
+
+@media screen and (max-width: 1100px){
+    main{
+        section{
+            .trabaja-con-nosotros{
+                h2{
+                    font-size: 45px ;
+                }
+                p{
+                    font-size: 16px ;
+                }
+                form{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+
+/*ACERCA DE*/ 
+
+@media screen and (min-width:920px){
+    main{
+        section{
+            .acercade-grid-3{
+                @include grid-mediaquerys-2 (repeat(2,1fr), 1fr);
+                grid-template-areas: 
+                "contactanos ubicacion"
+                "contactanos ubicacion";
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:920px){
+    main{
+        section{
+            .contenedor-padre-acercade1{
+                @include grid-mediaquerys-2 (1fr, 2fr);
+                grid-template-areas: 
+                "imagen1"
+                "texto1";
+            }
+        }
+        section{
+            .contenedor-padre-acercade2{
+                @include grid-mediaquerys-2 (1fr, 2fr);
+                grid-template-areas: 
+                "imagen2"
+                "texto2";
+            }
+        }
+        section{
+            .acercade-grid-3{
+                @include grid-mediaquerys-2 (1fr, 2fr);
+                grid-template-areas: 
+                "contactanos"
+                "ubicacion";
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:650px){
+    main{
+        .acerca-de-titulo{
+            height: 500px;
+            div{
+                h2{
+                    font-size: 45px ;
+                    font-weight: 20px;
+                }
+                p{
+                    font-size: 15px ;
+                    font-weight: 10px;
+                }
+            }
+        }
+        section{
+            .contenedor-padre-acercade1{
+                .contenedor-acercade-texto1{
+                    h3{
+                        font-size: 1.8rem;
+                    }
+                    p{
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+            .contenedor-padre-acercade2{
+                .contenedor-acercade-texto2{
+                    h3{
+                        font-size: 1.8rem;
+                    }
+                    p{
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+        section{
+            .acercade-grid-3{
+                .contenedor-ubicacion{
+                    iframe{
+                        width: 400px;
+                        height: 250px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:450px){
+    main{
+        section{
+            .acercade-grid-3{
+                .contenedor-ubicacion{
+                    h3{
+                        font-size: 1.5rem;
+                    }
+                    p{
+                        font-size: 0.75rem;
+                    }
+                    iframe{
+                        width: auto;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}

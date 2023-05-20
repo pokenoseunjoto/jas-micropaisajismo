@@ -1,0 +1,94 @@
+/*Header*/
+
+.header-contenedor{
+    nav{
+        background-color: $color-principal;
+        .container-fluid{
+            .navbar-brand{
+                img{
+                    height: 100px;
+                    width: 100px;
+                }
+            }
+            .navbar-brand{
+                h1{
+                    color: $color-h1;
+                    display: inline-block;
+                    font-size:xx-large ;
+                    font-weight: 40px;
+                    font-family: 'Alkatra', cursive;
+                }
+            }
+            .navbar-toggler{
+                background-color: rgba(255, 235, 205, 0.404);
+            }
+            div{
+                ul{
+                    .dropdown{
+                        padding: 0.5rem 1rem;
+                        .dropdown-toggle{
+                            color: blanchedalmond;
+                            font-family: 'Alkatra', cursive;
+                            transition: 1s;
+                            &:hover{
+                                color: rgb(255, 193, 111);
+                                font-size: 1.1rem;
+                            }
+                        }
+                        .dropdown-menu{
+                            background-color: rgb(83, 78, 78);
+                            transition: 1s;
+                            &:hover{
+                                border: solid rgba(255, 235, 205, 0.541);
+                            }
+                            li{
+                                .dropdown-item{
+                                    color: rgba(255, 235, 205, 0.733);
+                                    font-family: 'Alkatra', cursive;
+                                    text-align: center;
+                                    transition: 1s;
+                                    &:hover{
+                                        color: rgb(117, 81, 33);
+                                        font-size: 1.4rem;
+                                        background-color:  rgba(255, 235, 205, 0.651);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .nav-item{
+                        padding: 0.5rem 1rem;
+                        .active{
+                            color: rgba(255, 235, 205, 0.733);
+                            font-family: 'Alkatra', cursive;
+                            transition: 1s;
+                            &:hover{
+                                color: rgb(255, 193, 111);
+                                font-size: 1.1rem;
+                            }
+                        }
+                    }
+                }
+                .d-flex{
+                    button{
+                        color: blanchedalmond;
+                        font-family: 'Alkatra', cursive;
+                        border: solid 0.1rem blanchedalmond;
+                        &:hover{
+                            background-color: rgb(167, 103, 6);
+                            font-family: 'Alkatra', cursive;
+                            border: solid 0.1rem blanchedalmond;
+                        }
+                    }
+                    input{
+                        border: solid 0.3rem rgb(129, 114, 91);
+                        transition: 1s;
+                        &:hover{
+                            border: solid 0.3rem rgb(223, 172, 96);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

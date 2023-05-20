@@ -1,0 +1,65 @@
+//*PALETA DE COLORES
+$color-principal:rgb(41, 34, 34);
+$color-h1:rgb(105, 104, 87);
+/*Background-color*/
+$color-1: rgba(210, 105, 30, 0.829);
+$color-2: rgba(240, 248, 255, 0.274);
+
+
+
+
+
+/*EXTENDS*/
+
+
+%background-image{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:bottom;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+
+
+%flexbox-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+%flexbox-2{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+%flexbox-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flexbox-4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+//* MIXINS
+
+@mixin grid ($grid, $columns){
+    display: $grid;
+    grid-template-columns: $columns;
+}
+
+@mixin grid-mediaquerys ($grid, $rows){
+    display: $grid;
+    grid-template-rows: $rows;
+}
+
+@mixin grid-mediaquerys-2 ($columns, $rows){
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+}
