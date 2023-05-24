@@ -44,6 +44,10 @@ main{
                 position: relative;
                 margin: 20px 5px 20px 5px;
                 display: inline-block;
+                transition: 0.8s ease-in-out;
+                &:hover{
+                    transform: scale(1.06);
+                }
                 a{
                     img{
                         width: 100%;
@@ -93,6 +97,10 @@ main{
                 position: relative;
                 margin: 20px 5px 20px 5px;
                 display: inline-block;
+                transition: 0.8s ease-in-out;
+                &:hover{
+                    transform: scale(1.06);
+                }
                 a{
                     img{
                         width: 100%;
@@ -579,7 +587,7 @@ main{
                 justify-content: space-around;
                 text-align: center;
                 font-family: 'Alkatra', cursive;
-                h2{
+                h3{
                     color: beige;
                     font-size: 2.5rem;
                     padding: 15px;
@@ -598,9 +606,16 @@ main{
                     font-size: 1.2rem;
                     padding: 20px;
                     transition: 1s;
+                    span{
+                        color: rgba(248, 237, 85, 0.801);
+                        font-size: 1.3rem;
+                    }
                     /*PSEUDOCLASES Y PSEUDO ELEMENTOS*/
                     &:hover{
                         font-size: 1.6rem;
+                        span{
+                            font-size: 1.7rem;
+                        }
                     }
                     &::selection{
                         background-color: $color-1;
