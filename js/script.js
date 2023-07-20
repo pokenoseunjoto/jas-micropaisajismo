@@ -1,11 +1,6 @@
 
 
-
-let resultado = ""
-let valor = 0
-let nuevaOperacion = false
 let crearCuenta = false
-
 let nombreUsuario = "";
 let apellidoUsuario = "";
 
@@ -27,58 +22,122 @@ do {
 console.log("Bienvenido/a" + " " + nombreUsuario + " " + apellidoUsuario)
 
 
+//CODIGO ESPECIFICANDO CADA TERRARIO
+
+let terrarios = [
+    {
+        id: 1,
+        nombreTerrario: "Jar",
+        precio: 4500,
+    },
+
+    {
+        id: 2,
+        nombreTerrario: "Jug",
+        precio: 7500,
+    },
+
+    {
+        id: 3,
+        nombreTerrario: "Low Vase",
+        precio: 9000,
+    },
+
+    {
+        id: 4,
+        nombreTerrario: "Cylinder",
+        precio: 12500,
+    }
+]
+
+let producto = null
+let carrito = [];
 
 
+//FIND - CODIGO PARA ELEGIR TERRARIO
 
-
-//CODIGO PARA INGRESAR QUE PRODUCTOS SE DESEA COMPRAR Y A QUE PRECIO
-
-
-function hacerCarrito(){
-    console.log("Productos en el carrito:");
-    do {
-        terrarios = prompt("¿Cual terrario deseas comprar? (JAR) (JUG) (LOW VASE) (CYLINDER)")
-        valor = Number(prompt("¿Cuantos terrarios andas buscando?"))
-        productos(4500,7500,9000,12500)
-        nuevaOperacion = confirm("¿Queres comprar algo mas?")
-    } while (nuevaOperacion);
+function buscarProducto() {
+    let seleccion = prompt("Ingrese el nombre del terrario (Jar, Jug, Low Vase, Cylinder")
+    for (let i = 0; i < terrarios.length; i++) {
+        producto = terrarios.find((t) => t.nombreTerrario.toLowerCase() === seleccion.toLowerCase())
+    }   
 }
 
 
 
-// Terrario jar: $4500, Terrario jug: $7500, Terrario low vase: $9000, Terrario cylinder: $12500
+//CODIGO PARA INGRESAR LA CANTIDAD
 
-function productos(jar, jug, lowVase, cylinder) {
-    switch (terrarios.toUpperCase()) {
-        case "JAR":
-            resultado = valor * jar
-            console.log("Compraste" + " " + valor + " " + "terrario/s jar a " + resultado + " ARS")
-            break;
-
-            case "JUG":
-            resultado = valor * jug
-            console.log("Compraste" + " " + valor + " " + "terrario/s jug a " + resultado + " ARS")
-            break;
-
-            case "LOW VASE":
-            resultado = valor * lowVase
-            console.log("Compraste" + " " + valor + " " + "terrario/s Low Vase a " + resultado + " ARS")
-            break;
-
-            case "CYLINDER":
-            resultado = valor * cylinder
-            console.log("Compraste" + " " + valor + " " + "terrario/s Cylinder a " + resultado + " ARS")
-            break;
-    
-        default:
-            alert("No existen esos terrarios")
-            terrarios = 0
-            break;
+function agregarCarrito() {
+    if (producto) {
+        let cantidad = parseInt(prompt("Ingrese la cantidad deseada"));
+        carrito.push({
+            producto: producto.nombreTerrario,
+            cantidad: cantidad,
+            subtotal: producto.precio * cantidad
+        });
+    } else {
+        alert("El producto seleccionado no existe, por favor vuelva a intentarlo.");
     }
 }
 
-//ACTIVANDO CARRITO Y SALUDO FINAL
 
-hacerCarrito()
+//SI LO ANTERIOR INGRESADO ES VERDADERO HACEMOS ESTE CODIGO PARA CONFIRMAR SI QUEREMOS AGREGAR OTRO PRODUCTO
+
+
+function confirmarCarrito () {
+    while (true) {
+        buscarProducto();
+        agregarCarrito();
+
+        if(!confirm("¿Desea agregar otro producto al carrito?")) {
+            break;
+        }
+    }
+}
+
+
+
+//CON ESTE CODIGO VACIAMOS EL CARRITO Y DAMOS LA OPORTUNIDAD A QUE VUELVA A CARGAR PRODUCTOS.
+
+
+function vaciarCarrito() {
+    carrito = [];
+    alert("El carrito ha sido vaciado.");
+}
+
+
+do {
+    producto = null; // Reiniciar el producto seleccionado
+    confirmarCarrito();
+    if (carrito.length > 0) {
+        if (confirm("¿Desea vaciar el carrito?")) {
+            vaciarCarrito();
+        }
+    }
+} while (confirm("¿No quiere seguir comprando?"));
+
+
+
+//REDUCE - CON ESTE CODIGO SUMAMOS EL TOTAL DE LOS PRODUCTOS SELECCIONADOS.
+
+
+function calcularTotal() {
+    let total = carrito.reduce((acu, item) => acu + item.subtotal, 0);
+
+    console.log("Carrito de compras:");
+    carrito.forEach((item) => {
+        console.log(`- ${item.cantidad} ${item.producto}: ${item.subtotal}`);});
+    console.log(`Total a pagar: ${total}`);
+}
+
+
+
+calcularTotal()
+
+//FINAL DEL CODIGO SALUDANDO AL USUARIO
+
 
 console.log("Gracias" + " " + nombreUsuario + " " + apellidoUsuario + " " + "por tu compra!")
+
+
+
