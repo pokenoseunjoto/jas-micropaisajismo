@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "titulo": "Terrario Jar",
+        "precio": 4500,
+        "imagen": "10.jpg"
+    },
+    {
+        "id": 2,
+        "titulo": "Terrario Jug",
+        "precio": 7500,
+        "imagen": "12.jpg"
+    },
+    {
+        "id": 3,
+        "titulo": "Terrario Low Vase",
+        "precio": 9000,
+        "imagen": "1.jpg"
+    },
+    {
+        "id": 4,
+        "titulo": "Terrario Cylinder",
+        "precio": 12500,
+        "imagen": "0.jpg"
+    }
+]

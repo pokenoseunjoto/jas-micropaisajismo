@@ -89,6 +89,9 @@ main {
       .header-contenedor nav .container-fluid div ul .nav-item .active:hover {
         color: #ffc16f;
         font-size: 1.1rem; }
+  .header-contenedor nav .container-fluid div .ordenar {
+    padding: 0.5rem 1rem;
+    margin-bottom: 0px; }
   .header-contenedor nav .container-fluid div .d-flex button {
     color: blanchedalmond;
     font-family: 'Alkatra', cursive;
@@ -102,6 +105,9 @@ main {
     transition: 1s; }
     .header-contenedor nav .container-fluid div .d-flex input:hover {
       border: solid 0.3rem #dfac60; }
+  .header-contenedor nav .container-fluid div .carrito {
+    padding: 0.5rem 1rem;
+    margin-bottom: 0px; }
 
 /*----------------Main del index---------------*/
 main .hero-section {

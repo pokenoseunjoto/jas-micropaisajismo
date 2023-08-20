@@ -6,6 +6,14 @@ if (localStorage.getItem("carrito")) {
     localStorage.setItem("carrito", JSON.stringify(productosEnCarrito))
 }
 
+
+
+function buscarTerrarios () {
+    return fetch("../data.json").then(response => response.json())
+}
+
+
+
 //Buscador
 
 function buscarInfo(buscado, array) {
@@ -85,6 +93,11 @@ function mostrarCatalogo(array) {
 
         btnAgregar.addEventListener("click", () => {
             agregarAlCarrito(terrario)
+            Swal.fire(
+                'Excelente!',
+                `Has agregado ${terrario.titulo} al carrito`,
+                'success'
+                )
         })
     }
 }
@@ -118,7 +131,25 @@ function cargarProductosCarrito(array) {
     array.forEach((productoCarrito, indice) => {
         document.getElementById(`botonEliminar${productoCarrito.id}`).addEventListener("click", () => {
             let cardProducto = document.getElementById(`productoCarrito${productoCarrito.id}`)
-            cardProducto.remove()
+            Swal.fire({
+                title: `¿Estas seguro que quieres eliminar ${productoCarrito.titulo} del carrito?`,
+                text: "En caso de eliminarlo, podras volver a agregarlo si lo vuelves a solicitar",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si, descartar',
+                cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                if (result.isConfirmed) {
+                cardProducto.remove()
+                Swal.fire(
+                    'Eliminado!',
+                    `Has sacado ${productoCarrito.titulo} del carrito!`,
+                    'success'
+                )
+                }
+            })
             productosEnCarrito.splice(indice, 1)
             localStorage.setItem("carrito", JSON.stringify(productosEnCarrito))
         })
@@ -128,7 +159,9 @@ function cargarProductosCarrito(array) {
 
 
 buscador.addEventListener("input", () => {
-    buscarInfo(buscador.value, terrarios)
+    buscarTerrarios().then(productos => {
+        buscarInfo(buscador.value, productos)
+    })
 })
 
 botonCarrito.addEventListener("click", () => {
@@ -137,19 +170,30 @@ botonCarrito.addEventListener("click", () => {
 
 selectOrden.addEventListener("change", () => {
     if (selectOrden.value == 1) {
-        ordenarMayorMenor(terrarios)
+        buscarTerrarios().then(productos => {
+            ordenarMayorMenor(productos)
+        })
     }
 
     else if (selectOrden.value == 2) {
-        ordenarMenorMayor(terrarios)
+        buscarTerrarios().then(productos => {
+            ordenarMenorMayor(productos)
+        })
     }
 
     else if (selectOrden.value == 3) {
-        ordenarAlfabeticamente(terrarios)
+        buscarTerrarios().then(productos => {
+            ordenarAlfabeticamente(productos)
+        })
     }
     else {
-        mostrarCatalogo(terrarios)
+        buscarTerrarios().then(productos => {
+            mostrarCatalogo(productos)
+        })
     }
 })
 
-mostrarCatalogo(terrarios)
+
+buscarTerrarios().then(productos => {
+    mostrarCatalogo(productos)
+})
